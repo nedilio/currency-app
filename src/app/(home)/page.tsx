@@ -44,11 +44,11 @@ export default async function Home() {
   const retrieveDate: string = time_last_update_utc;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-20 bg-yellow-200 ">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-yellow-200 ">
       <h1 className="text-3xl italic font-black text-center mb-4">
         CurrencyExchange
       </h1>
-      <div className="border border-2 border-black w-full max-w-lg justify-center p-6 shadow-lg bg-red-500 text-white rounded-2xl">
+      <div className="border border-2 border-black w-full max-w-lg justify-center p-8 shadow-lg bg-red-500 text-white rounded-2xl">
         <HomeClient countries={COUNTRIES} date={time_last_update_utc} />
       </div>
     </main>
