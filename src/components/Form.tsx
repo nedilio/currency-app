@@ -19,6 +19,8 @@ function Form({ value, onChange, country }: Props) {
           type="number"
           min={0}
           value={value}
+          inputMode="decimal"
+          pattern="^(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d{2})?$"
           onChange={(e) => onChange(Number(e.target.value))}
         />
       </label>
