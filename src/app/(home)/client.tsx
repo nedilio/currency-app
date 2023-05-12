@@ -36,9 +36,15 @@ export default function HomeClient({ countries, date }: Props) {
 
   return (
     <div className="flex flex-col items-center justify-center gap-y-2">
-      <Image src={selectedCountry.flag} alt="flag" width={100} height={100} />
+      <Image
+        src={selectedCountry.flag}
+        alt="flag"
+        width={100}
+        height={100}
+        className="border-2 border-black rounded-full shadow-md"
+      />
       <label htmlFor="country" className="italic fontsemibold text-lg">
-        Selecciona el Pais
+        Selecciona el País
       </label>
       <select
         name="country"
@@ -52,17 +58,28 @@ export default function HomeClient({ countries, date }: Props) {
           </option>
         ))}
       </select>
-      <p className="text-sm">
-        {Number(1).toLocaleString("es-CL", {
-          style: "currency",
-          currency: "USD",
-        })}{" "}
-        =
-        {Number(selectedCountry.rate.toFixed(2)).toLocaleString("es-CL", {
-          style: "currency",
-          currency: selectedCountry.currency,
-        })}
-      </p>
+      <div className="flex justify-center items-center w-full gap-x-2 text-xl">
+        <Image src={selectedCountry.flag} alt="usd" width={20} height={20} />
+        <span>
+          {Number(selectedCountry.rate.toFixed(2)).toLocaleString("es-CL", {
+            style: "currency",
+            currency: selectedCountry.currency,
+          })}
+        </span>
+        <span>➡</span>
+        <span>
+          {Number(1).toLocaleString("es-CL", {
+            style: "currency",
+            currency: "USD",
+          })}
+        </span>
+        <Image
+          src="/flags/united-states.png"
+          alt="usd"
+          width={20}
+          height={20}
+        />
+      </div>
       <Form value={amount} onChange={setAmount} country={selectedCountry} />
       <section>
         <h2 className="text-center text-2xl font-semibold">
@@ -71,10 +88,21 @@ export default function HomeClient({ countries, date }: Props) {
             currency: "USD",
           })}
         </h2>
-        <span className="italic text-xs text-gray-900">
+        <p className="italic text-xs text-center text-gray-900 mt-2">
           Actualizado: {updatedAt}
-        </span>
+        </p>
       </section>
+      <footer>
+        👨‍💻 by{" "}
+        <a
+          className="underline text-slate font-semibold"
+          href="https://github.com/nedilio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          @nedilio
+        </a>
+      </footer>
     </div>
   );
 }

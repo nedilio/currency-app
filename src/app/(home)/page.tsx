@@ -3,21 +3,21 @@ import HomeClient from "./client";
 
 let COUNTRIES: Country[] = [
   {
-    name: "South Africa",
+    name: "Sudáfrica",
     code: "ZA",
     flag: "/flags/002-south-africa.png",
     currency: "ZAR",
     rate: 0,
   },
   {
-    name: "Kenya",
+    name: "Kenia",
     code: "KE",
     flag: "/flags/001-kenya.png",
     currency: "KES",
     rate: 0,
   },
   {
-    name: "Ethiopia",
+    name: "Etiopía",
     code: "ET",
     flag: "/flags/003-ethiopia.png",
     currency: "ETB",

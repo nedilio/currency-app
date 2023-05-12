@@ -14,9 +14,11 @@ function Form({ value, onChange, country }: Props) {
   return (
     <form className="w-full">
       <label className="block space-y-1 text-lg">
-        <span className="block text-center">Monto en {country.currency}:</span>
+        <span className="block text-center font-bold italic">
+          Monto en {country.currency}:
+        </span>
         <input
-          className="block w-full rounded-full bg-green-700 p-2 text-right text-3xl"
+          className="block w-full rounded-full bg-green-700 p-1 text-center text-3xl font-mono"
           type="number"
           min={0}
           value={value}
