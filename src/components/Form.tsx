@@ -20,7 +20,6 @@ function Form({ value, onChange, country }: Props) {
           type="number"
           min={0}
           value={value}
-          inputMode="numeric"
           onChange={(e) => onChange(Number(e.target.value))}
         />
       </label>
