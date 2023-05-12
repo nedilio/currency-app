@@ -1,3 +1,16 @@
+# Currency App
+
+To use in african countries (South Africa, Kenya and Ethiopia)
+
+## Technologies
+- Next.js ⬇
+- Rapid API to fetch rates
+- TypeScript
+
+![photo_5111621431908739815_y](https://github.com/nedilio/currency-app/assets/2835435/bb5a8720-8686-42ab-87b1-c52f2b8dec47)
+
+See deployed app [Click Here](https://currency-app-pink.vercel.app/) 🖱
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
