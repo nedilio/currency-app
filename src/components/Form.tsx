@@ -10,18 +10,26 @@ interface Props {
 }
 
 function Form({ value, onChange, country }: Props) {
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(",", ".");
+    if (value === "") {
+      value = "0";
+    }
+    onChange(Number(value));
+  };
+
   return (
     <form className="w-full">
       <label className="block space-y-1 text-lg">
         <span className="block text-center">Monto en {country.currency}:</span>
         <input
           className="block w-full rounded-full bg-green-700 p-2 text-right text-3xl"
-          type="number"
+          type="text"
           min={0}
           value={value}
           inputMode="decimal"
           pattern="^(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d{2})?$"
-          onChange={(e) => onChange(Number(e.target.value))}
+          onChange={handleOnChange}
         />
       </label>
     </form>
